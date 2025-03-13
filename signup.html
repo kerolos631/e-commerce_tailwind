@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kerolos-ecommerce</title>
+  <link rel="stylesheet" href="dist/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="dist/css/output.css" rel="stylesheet">
+
+</head>
+<body >
+   <header class="w-full z-10 bg-white p-3 drop-shadow-lg fixed top-0 left-0  ">
+    <div class="container-one flex w-5/6 mx-auto flex-wrap items-center justify-between   ">
+        <div class="logo">
+            <a href="#">
+                <img class="w-32 " src="dist/images/logo-black.png" alt="">
+            </a>
+        </div>
+        <div class="search my-4 w-5/6 md:w-1/2  mx-auto  order-3 md:order-2 h-14 border-2 border-amber-300 rounded-sm   text-start flex items-center justify-between  ">
+            <input onmousedown="goToSearch()" type="text" placeholder="search for products..." class="search-products w-2/3 px-2 text-sm outline-none h-full   ">
+            <button class= "cursor-pointer bg-amber-300 h-full w-1/3  capitalize "> <a href="products.html">search</a> </button>
+        </div>
+        <div class="cart flex items-center gap-2 md:order-3 ">
+            <div class="cart-logo relative border-2 border-black/20  text-center w-12 h-12 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-bag-shopping "></i>
+                <span class="absolute -top-2 -right-1 bg-amber-300 rounded-full w-6 h-6 flex items-center justify-center p-0.5 text-sm  ">0</span>
+            </div>
+            <div class="cart-details flex flex-col capitalize text-md  text-black/40 ">
+                <span>my cart:</span>
+                <span>$0</span>
+            </div>
+        </div>
+    </div>
+    <div class="line h-0.5 w-full bg-black/10 mb-2 "></div>
+    <div class="container-two flex w-5/6 mx-auto items-center justify-between">
+        <div class="links flex md:w-1/2  ">
+            <div class="bar md:hidden">
+                <i class="fa-solid fa-bars text-xl cursor-pointer "></i>
+            </div>
+            <ul class="hidden md:flex uppercase items-center w-full  justify-between gap-4 text-sm  font-bold    ">
+              <li class="block  hover:text-amber-300 duration-1000"><a href="home.html">home</a></li>
+              <li class="block  hover:text-amber-300 duration-1000"><a href="products.html">products</a></li>
+              <li class="block  hover:text-amber-300 duration-1000 "><a href="#">about us</a></li>
+              <li class="block  hover:text-amber-300 duration-1000"><a href="#">contact</a></li>
+            </ul>
+        </div>
+     <div class="register ">
+        <a class="bg-amber-300 px-3 flex items-center gap-1 justify-center capitalize font-medium rounded-xl text-sm w-24 lg:w-30 h-10 cursor-pointer  text-black/70 py-0.5 " href="login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+        <!-- <a class="bg-amber-300 px-3 flex items-center gap-1 justify-center capitalize font-medium rounded-xl text-sm w-24 lg:w-30 h-10 cursor-pointer  text-black/70 py-0.5 " href="sign.html">sign up <i class="fa-solid fa-user-plus"></i> </a> -->
+     </div>   
+    </div>
+   </header>
+   
+
+  <div class="signup-form mt-52 md:mt-40 py-8 bg-gray-50 w-full h-full">
+    <div class="container w-full mx-auto flex items-center justify-center relative">
+        <div class="login-section w-1/2 md:w-1/3 border-1 border-black/20  shadow-lg rounded-lg   ">
+            <form action="" method="post" class="p-4 " >
+              <h3 class="text-center font-bold uppercase text-xl">welcome back</h3>
+              <div class="name">
+                <input class="my-2  p-2 border-1 w-full capitalize border-black/20 rounded-lg" type="text" placeholder="name" name="name">
+              </div>
+              <div class="email">
+                <input class="my-2  p-2 border-1 w-full capitalize border-black/20 rounded-lg" type="email" placeholder="email" name="email">
+              </div>
+              <div class="pass">
+                <input class="my-2 p-2 border-1 w-full capitalize border-black/20 rounded-lg" type="text" name="pass" placeholder="password">
+              </div>
+              <div class="pass">
+                <input class="my-2 p-2 border-1 w-full capitalize border-black/20 rounded-lg" type="text" name="pass" placeholder="comfirm password">
+              </div>
+              <div class="sign-btn ">
+                <input class="bg-amber-300 w-full my-3 p-2 rounded-xl opacity-80 cursor-pointer hover:opacity-100 duration-1000 capitalize" type="submit" value="signup" >
+              </div>
+
+              <div class=" text-start  text-sm capitalize ">
+                <p class="text-black/70">have an account? <a class="font-bold text-amber-500 " href="login.html">login</a></p>
+              </div>
+
+     
+              <div class="log-apple-google flex flex-col gap-2 ">
+                <button class="bg-black/90 text-white rounded-xl py-2 opacity-75 hover:opacity-100 capitalize mt-2 duration-1000 cursor-pointer">
+                    
+                    <p> <i class="fa-brands fa-apple text-lg mr-3 "></i>  login with apple</p>
+                </button>
+                <button class="bg-amber-300 rounded-xl py-2 opacity-75 hover:opacity-100 capitalize duration-1000 cursor-pointer">
+                    
+                    <p><i class="fa-brands fa-google text-lg mr-3 "></i>  login with google</p>
+                </button>
+
+              </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+  </div> 
+
+  <footer class="bg-gray-700 text-white capitalize py-8 flex items-center justify-center gap-8 ">
+    <img src="dist/images/logo-white.png" alt="">
+    <h3 class="font-bold uppercase">made by / kerolos halim</h3>
+  </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="dist/js/swiper.js"></script>
+  <script src="dist/js/master.js"></script>
+</body>
+</html>

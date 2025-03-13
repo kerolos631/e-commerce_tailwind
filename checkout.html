@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kerolos-ecommerce</title>
+  <link rel="stylesheet" href="dist/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="dist/css/output.css" rel="stylesheet">
+
+</head>
+<body >
+    <div class="cart z-50 bg-white shadow-2xl   fixed top-0 right-0 h-full w-0 duration-1000">
+        <div class="container flex flex-col gap-8  justify-between h-full  p-4 ">
+            <div class="title flex items-center justify-between border-b-2 border-black/20 pb-4  ">
+                <h3 class="capitalize font-bold ">my cart <span class="itemsNum font-semibold text-black/50 text-sm "></span></h3>
+                
+                <div class="close-tap border-2 border-black w-8 h-8 rounded-full flex items-center justify-center font-bold cursor-pointer">
+                    <span class="x-sign hover:text-amber-500 duration-1000">X</span>
+                    
+                </div>
+               
+            </div>
+            <div class="cart-products h-3/4  w-full overflow-y-auto ">
+                 
+
+                 
+
+
+            </div>
+            <div class="cart-footer border-t-black/20 border-t-2 pt-2    ">
+                <div class="dele-all hidden">
+                    <i onclick="deleteAllItems()" class="fa-solid fa-trash  hover:text-yellow-600 duration-1000 cursor-pointer text-sm text-black/20 capitalize "> delete all</i>
+                </div>
+                <div class="total flex items-center justify-between mb-4 capitalize text-black/60 font-bold text-sm ">
+                    <span>cart subtotal</span>
+                    <span class="total-result text-yellow-700 ">0$</span>
+                </div>
+                <div class="btns flex flex-col items-center capitalize  ">
+                    <a class="bg-amber-white pointer-events-none border-2 border-amber-300 hover:bg-amber-300 duration-1000   w-full inline-block uppercase  text-center py-2 mb-1  cursor-pointer rounded-sm  font-semibold " href="checkout.html"><button class="uppercase text-sm font-semibold ">proceed to checkout</button></a>
+                    <a class=" duration-1000 bg-amber-300  border-2 border-amber-300 hover:bg-white  w-full inline-block uppercase  text-center py-2 mb-1  cursor-pointer rounded-sm  font-semibold " href="home.html"><button class="uppercase text-sm font-semibold ">shop more</button></a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+   <!-- <header class="w-full z-10 bg-white p-3 drop-shadow-lg fixed top-0 left-0  ">
+    <div class="container-one flex w-5/6 mx-auto flex-wrap items-center justify-between   ">
+        <div class="logo">
+            <a href="home.html">
+                <img class="w-32 " src="dist/images/logo-black.png" alt="">
+            </a>
+        </div>
+        <div class="search my-4 w-5/6 md:w-1/2  mx-auto  order-3 md:order-2 h-14 border-2 border-amber-300 rounded-sm   text-start flex items-center justify-between  ">
+            <input onmousedown="goToSearch()" type="text" placeholder="search for products..." class="search-products w-2/3 px-2 text-sm outline-none h-full   ">
+            <button class= "cursor-pointer bg-amber-300 h-full w-1/3  capitalize "> <a href="products.html">search</a> </button>
+        </div>
+        <div class="cart flex items-center gap-2 md:order-3 ">
+            <div class="bag-shop cursor-pointer   relative border-2 border-black/20  text-center w-12 h-12 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-bag-shopping hover:text-amber-300 duration-1000 "></i>
+                <span class="cartNums absolute -top-2 -right-1 bg-amber-300 rounded-full w-6 h-6 flex items-center justify-center p-0.5 text-sm  "></span>
+            </div>
+            <div class="cart-details flex flex-col capitalize text-md  text-black/40 ">
+                <span>my cart:</span>
+                <span>$0</span>
+            </div>
+        </div>
+    </div>
+    <div class="line h-0.5 w-full bg-black/10 mb-2 "></div>
+    <div class="container-two flex w-5/6 mx-auto items-center justify-between">
+        <div class="links flex md:w-1/2  ">
+            <div class="bar relative md:hidden">
+                <i onclick="openMenu()" class="bar-icon fa-solid fa-bars text-xl cursor-pointer hover:text-amber-300 duration-1000 "></i>
+                <ul class=" megaMenu  text-sm  font-bold hidden z-50 top-0 bg-white w-full left-0 h-lvh  duration-1000  ">
+                    <div class="   text-end mx-4 my-4 flex items-center justify-end   ">
+                        <p onclick="openMenu()" class="close-tap border-1 cursor-pointer border-black w-10 h-10 flex items-center justify-center rounded-full hover:text-amber-300 duration-1000">X</p>
+                    </div>
+                    <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30   cursor-pointer    "><a href="home.html">home</a></li>
+                    <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30  cursor-pointer    "><a href="products.html">products</a></li>
+                    <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30   cursor-pointer     "><a href="#">about us</a></li>
+                    <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30   cursor-pointer    "><a href="#">contact</a></li>
+                </ul>
+            </div>
+            <ul class="hidden md:flex uppercase items-center w-full  justify-between gap-4 text-sm  font-bold    ">
+                <li class="block  hover:text-amber-300 duration-1000"><a href="home.html">home</a></li>
+                <li class="block  hover:text-amber-300 duration-1000"><a href="products.html">products</a></li>
+                <li class="block  hover:text-amber-300 duration-1000 "><a href="#">about us</a></li>
+                <li class="block  hover:text-amber-300 duration-1000"><a href="#">contact</a></li>
+            </ul>
+        </div>
+     <div class="register flex  gap-2 ">
+        <a class="bg-amber-300 px-3 flex items-center gap-1 justify-center capitalize font-medium rounded-xl text-sm w-24 lg:w-30 h-10 cursor-pointer  text-black/70 py-0.5 " href="login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+        <a class="bg-amber-300 px-3 flex items-center gap-1 justify-center capitalize font-medium rounded-xl text-sm w-24 lg:w-30 h-10 cursor-pointer  text-black/70 py-0.5 " href="signup.html">sign up <i class="fa-solid fa-user-plus"></i> </a>
+     </div>   
+    </div>
+   </header> -->
+   <header class="w-full z-10 bg-white p-3 drop-shadow-lg fixed top-0 left-0  ">
+    <div class="container-one flex w-5/6 mx-auto flex-wrap items-center justify-between   ">
+        <div class="logo">
+            <a href="home.html">
+                <img class="w-32 " src="dist/images/logo-black.png" alt="">
+            </a>
+        </div>
+        <div class="search my-4 w-5/6 md:w-1/2  mx-auto  order-3 md:order-2 h-14 border-2 border-amber-300 rounded-sm   text-start flex items-center justify-between  ">
+            <input type="text" onmousedown="goToSearch()"  placeholder="search for products..." class="search-products w-2/3 px-2 text-sm outline-none h-full   ">
+            <button class= "cursor-pointer bg-amber-300 h-full w-1/3  capitalize "> <a href="products.html">search</a> </button>
+        </div>
+        <div class="cart flex items-center gap-2 md:order-3 ">
+            <div class="bag-shop cursor-pointer   relative border-2 border-black/20  text-center w-12 h-12 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-bag-shopping hover:text-amber-300 duration-1000 "></i>
+                <span class="cartNums absolute -top-2 -right-1 bg-amber-300 rounded-full w-6 h-6 flex items-center justify-center p-0.5 text-sm  "></span>
+            </div>
+            <div class="cart-details flex flex-col capitalize text-md  text-black/40 ">
+                <span>my cart:</span>
+                <span class="total-price">$0</span>
+            </div>
+        </div>
+    </div>
+    <div class="line h-0.5 w-full bg-black/10 mb-2 "></div>
+    <div class="container-two flex w-5/6 mx-auto items-center justify-between">
+        <div class="links flex md:w-1/2  ">
+            <div class="bar relative md:hidden">
+                <i onclick="openMenu()" class="bar-icon fa-solid fa-bars text-xl cursor-pointer hover:text-amber-300 duration-1000 "></i>
+                <ul class=" megaMenu  text-sm  font-bold hidden z-50 top-0 bg-white w-full left-0 h-lvh  duration-1000  ">
+                    <div class="   text-end mx-4 my-4 flex items-center justify-end   ">
+                        <p onclick="openMenu()" class="close-tap border-1 cursor-pointer border-black w-10 h-10 flex items-center justify-center rounded-full hover:text-amber-300 duration-1000">X</p>
+                    </div>
+                    <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30   cursor-pointer    "><a href="home.html">home</a></li>
+                    <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30  cursor-pointer    "><a href="products.html">products</a></li>
+                    <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30   cursor-pointer     "><a href="#">about us</a></li>
+                    <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30   cursor-pointer    "><a href="#">contact</a></li>
+                </ul>
+            </div>
+            <ul class="hidden md:flex uppercase items-center w-full  justify-between gap-4 text-sm  font-bold    ">
+                <li class="block hover:text-amber-300 duration-1000"><a href="home.html">home</a></li>
+                <li class="block  hover:text-amber-300 duration-1000"><a href="products.html">products</a></li>
+                <li class="block  hover:text-amber-300 duration-1000 "><a href="#">about us</a></li>
+                <li class="block  hover:text-amber-300 duration-1000"><a href="#">contact</a></li>
+            </ul>
+        </div>
+     <div class="register flex  gap-2 ">
+        <a class="bg-amber-300 px-3 flex items-center gap-1 justify-center capitalize font-medium rounded-xl text-sm w-24 lg:w-30 h-10 cursor-pointer  text-black/70 py-0.5 " href="login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+        <a class="bg-amber-300 px-3 flex items-center gap-1 justify-center capitalize font-medium rounded-xl text-sm w-24 lg:w-30 h-10 cursor-pointer  text-black/70 py-0.5 " href="signup.html">sign up <i class="fa-solid fa-user-plus"></i> </a>
+     </div>   
+    </div>
+   </header>
+   <form action="https://script.google.com/macros/s/AKfycbweSq3Hx3a_iJ7TB4IOmVNoyyw9psbZZ7jaBenojmxwa1V8DWbv0AWJZxAbPT7o5xtb/exec" method="post" id="myOrder">
+    <section class="container mt-52 md:mt-40 py-8 w-5/6 mx-auto flex flex-col-reverse gap-5   md:flex-row ">
+         <input type="hidden" name="order" id="ordercontent">
+        <div class="delivery md:w-1/2">
+            <div class="delivery-address bg-white border-1 border-black/30 shadow-2xl ">
+                <h3 class="p-2 bg-amber-300 capitalize text-white font-bold ">delivery address</h3>
+            <div class="email p-2 flex flex-col capitalize text-sm ">
+                <label for="email">email</label>
+                <input name="email" type="email"placeholder="Type Your Email" class="border-1 p-2 rounded-md outline-none  mt-2   ">
+            </div>
+            <div class="name p-2 flex flex-col capitalize text-sm ">
+                <label for="name">name</label>
+                <input name="name" type="text"placeholder="Type Your Name" class="border-1 p-2 rounded-md  outline-none  mt-2  ">
+            </div>
+            <div class="address p-2 flex flex-col capitalize text-sm ">
+                <label for="address">address</label>
+                <input name="address" type="text"placeholder="Type Your Address" class="border-1 p-2 rounded-md outline-none  mt-2   ">
+            </div>
+            <div class="phone p-2 flex flex-col capitalize text-sm ">
+                <label for="phone">phone</label>
+                <input name="phone" type="text"placeholder="Type Your Phone" class="border-1 p-2 rounded-md outline-none  mt-2   ">
+            </div>
+            </div>
+            <div class="coupon-address mt-2  bg-white border-1 border-black/30 shadow-2xl ">
+            <h2 class="p-2 bg-amber-300 capitalize text-white font-bold ">coupon code</h2>
+            <div class="coupon p-2 flex flex-col capitalize text-sm ">
+                <label for="coupon">coupon code</label>
+                <input type="text"placeholder="coupon code" class="border-1 p-2 rounded-md outline-none  mt-2   ">
+            </div>
+            <!-- <label for="coupon">coupon code</label>
+            <input type="text"placeholder="coupon code"> -->
+
+            </div>
+
+        </div>
+
+        <div class="order-summary md:w-1/2   bg-white border-1 border-black/30 shadow-2xl flex flex-col md:justify-between">
+            <h3 class="p-2 bg-amber-300 capitalize text-white font-bold flex-none ">order summary</h3>
+            <div class="checkSec overflow-y-auto flex-1 max-h-52  md:max-h-82     ">
+                
+            </div>
+            <div class="price-check flex-none">
+                <div class="total flex items-center justify-between p-2 border-t-1 border-black/30 ">
+                    <h3 class="capitalize">total : </h3>
+                    <h3 class="check-price">$ 0</h3>
+                </div>
+                <div class="submit">
+                    <input class="submit-btn bg-white border-1 border-black/30 shadow-2xl hover:bg-amber-300 duration-1000  w-full p-2 cursor-pointer font-bold capitalize hover:text-white" type="submit" value="place order">
+                </div>
+            </div>
+<div class="translate-x-1/2"></div>
+        </div>
+    </section>
+
+   </form>
+    <div class="popup hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center bg-white z-50 px-4 py-5 shadow-2xl h-52 font-bold capitalize">
+        <div class="msg-content relative">
+            <i class="fa-solid fa-circle-check absolute -top-7 left-1/2 -translate-x-1/2 text-2xl text-green-400  "></i>
+            <div class="text-content">
+                <div class="text">
+                      <h3 class="uppercase text-red-500 ">thank you !</h3>
+                    <p class="text-black/30  mt-8 ">your order has been successfully submitted. thanks!</p>
+            </div>
+            </div>
+        </div>
+    </div>
+  
+
+
+
+
+   <footer class="bg-gray-700 text-white capitalize py-8 flex items-center justify-center gap-8 ">
+    <img src="dist/images/logo-white.png" alt="">
+    <h3 class="font-bold uppercase" >made by / kerolos halim</h3>
+  </footer>
+
+
+
+
+
+  
+  <script src="dist/js/products.js"></script>
+  <script src="dist/js/submit.js"></script>
+  <script src="dist/js/master.js"></script>
+</body>
+</html>
