@@ -13,7 +13,7 @@
    <header class="w-full z-10 bg-white p-3 drop-shadow-lg fixed top-0 left-0  ">
     <div class="container-one flex w-5/6 mx-auto flex-wrap items-center justify-between   ">
         <div class="logo">
-            <a href="#">
+            <a href="index.html">
                 <img class="w-32 " src="dist/images/logo-black.png" alt="">
             </a>
         </div>
@@ -35,9 +35,18 @@
     <div class="line h-0.5 w-full bg-black/10 mb-2 "></div>
     <div class="container-two flex w-5/6 mx-auto items-center justify-between">
         <div class="links flex md:w-1/2  ">
-            <div class="bar md:hidden">
-                <i class="fa-solid fa-bars text-xl cursor-pointer "></i>
-            </div>
+          <div class="bar relative md:hidden">
+            <i onclick="openMenu()" class="bar-icon fa-solid fa-bars text-xl cursor-pointer hover:text-amber-300 duration-1000 "></i>
+            <ul class=" megaMenu  text-sm  font-bold hidden z-50 top-0 bg-white w-full left-0 h-lvh  duration-1000  ">
+                <div class="   text-end mx-4 my-4 flex items-center justify-end   ">
+                    <p onclick="openMenu()" class="close-tap border-1 cursor-pointer border-black w-10 h-10 flex items-center justify-center rounded-full hover:text-amber-300 duration-1000">X</p>
+                </div>
+                <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30   cursor-pointer    "><a href="index.html">home</a></li>
+                <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30  cursor-pointer    "><a href="products.html">products</a></li>
+                <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30   cursor-pointer     "><a href="#">about us</a></li>
+                <li class="block  hover:text-amber-300 duration-1000 capitalize  p-2 text-center my-3 text-lg hover:bg-black/30   cursor-pointer    "><a href="#">contact</a></li>
+            </ul>
+        </div>
             <ul class="hidden md:flex uppercase items-center w-full  justify-between gap-4 text-sm  font-bold    ">
               <li class="block  hover:text-amber-300 duration-1000"><a href="index.html">home</a></li>
               <li class="block  hover:text-amber-300 duration-1000"><a href="products.html">products</a></li>
@@ -55,7 +64,7 @@
 
   <div class="signup-form mt-52 md:mt-40 py-8 bg-gray-50 w-full h-full">
     <div class="container w-full mx-auto flex items-center justify-center relative">
-        <div class="login-section w-1/2 md:w-1/3 border-1 border-black/20  shadow-lg rounded-lg   ">
+        <div class="login-section w-2/3 md:w-1/3 border-1 border-black/20  shadow-lg rounded-lg   ">
             <form action="" method="post" class="p-4 " >
               <h3 class="text-center font-bold uppercase text-xl">welcome back</h3>
               <div class="name">
