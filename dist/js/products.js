@@ -37,7 +37,7 @@ function searchRun(){
                 allProducts.innerHTML += `
 
          <div class="box p-3 relative bg-white border-2 border-black/20 shadow-2xl flex flex-col items-center justify-center w-fit h-64 ">
-                <div class="buy-tools absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
+                <div class="buy-tools absolute z-50 top-1/2 -translate-y-1/2 right-0 p-1 ">
                         <div class="heart   ">
                            
                             <i class="fa-solid fa-heart cursor-pointer hover:text-yellow-500 duration-1000 mb-2 "></i>
@@ -103,7 +103,7 @@ function filterSearch(mySearch){
                 allProducts.innerHTML += `
 
          <div class="box p-3 relative bg-white border-2 border-black/20 shadow-2xl flex flex-col items-center justify-center w-fit h-64 ">
-                <div class="buy-tools absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
+                <div class="buy-tools z-50 absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
                         <div class="heart   ">
                            
                             <i class="fa-solid fa-heart cursor-pointer hover:text-yellow-500 duration-1000 mb-2 "></i>
@@ -167,7 +167,7 @@ fetch("dist/js/items.json")
         onSaleObject.innerHTML +=`
         <div class="swiper-slide  ">
                 <div class="box p-3 bg-white border-2 border-black/20 shadow-2xl flex flex-col items-center justify-center w-fit ">
-                <div class="buy-tools absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
+                <div class="buy-tools z-50 absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
                         <div class="heart   ">
                            
                             <i class="fa-solid fa-heart cursor-pointer hover:text-yellow-500 duration-1000 mb-2 "></i>
@@ -213,7 +213,7 @@ if(computerBox){
         computerBox.innerHTML +=`
         <div class="swiper-slide  ">
                 <div class="box p-3 bg-white border-2 border-black/20 shadow-2xl flex flex-col items-center justify-center w-fit ">
-                <div class="buy-tools absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
+                <div class="buy-tools z-50 absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
                         <div class="heart   ">
                            
                             <i class="fa-solid fa-heart cursor-pointer hover:text-yellow-500 duration-1000 mb-2 "></i>
@@ -261,7 +261,7 @@ if(computerBoxTwo){
         computerBoxTwo.innerHTML +=`
         <div class="swiper-slide  ">
                 <div class="box p-3 bg-white border-2 border-black/20 shadow-2xl flex flex-col items-center justify-center w-fit ">
-                <div class="buy-tools absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
+                <div class="buy-tools z-50 absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
                         <div class="heart   ">
                            
                             <i class="fa-solid fa-heart cursor-pointer hover:text-yellow-500 duration-1000 mb-2 "></i>
@@ -311,7 +311,7 @@ if(computerBoxTwo){
         allProducts.innerHTML += `
 
          <div class="box p-3 relative bg-white border-2 border-black/20 shadow-2xl flex flex-col items-center justify-center w-fit ">
-                <div class="buy-tools absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
+                <div class="buy-tools z-50 absolute top-1/2 -translate-y-1/2 right-0 p-1 ">
                         <div class="heart   ">
                            
                             <i class="fa-solid fa-heart cursor-pointer hover:text-yellow-500 duration-1000 mb-2 "></i>
